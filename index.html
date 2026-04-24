@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Agile Capital Services — Premium Financial Advisory, Wealth Management, and Investment Planning for discerning clients." />
+  <title>Agile Capital Services | Empowering Your Financial Future</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo" aria-label="Agile Capital Services Home">
+      <div class="logo-mark"><span></span></div>
+      <div class="logo-text">
+        <span class="name">Agile Capital Services</span>
+        <span class="tagline">Excellence in Finance</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link">Services <span class="dropdown-arrow"></span></span>
+        <div class="dropdown-menu">
+          <a href="wealth-management.html">Wealth Management</a>
+          <a href="investment-planning.html">Investment Planning</a>
+          <a href="portfolio-management.html">Portfolio Management</a>
+          <a href="financial-advisory.html">Financial Advisory</a>
+          <a href="services.html">All Services →</a>
+        </div>
+      </li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+
+    <button class="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <div class="mobile-parent">Services <span class="mobile-arrow">▼</span></div>
+    <div class="mobile-submenu">
+      <a href="wealth-management.html">Wealth Management</a>
+      <a href="investment-planning.html">Investment Planning</a>
+      <a href="portfolio-management.html">Portfolio Management</a>
+      <a href="financial-advisory.html">Financial Advisory</a>
+      <a href="services.html">All Services</a>
+    </div>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+
+    <!-- Decorative rotating element -->
+    <div class="hero-deco">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="200,20 380,110 380,290 200,380 20,290 20,110" fill="none" stroke="#C9A84C" stroke-width="1"/>
+        <polygon points="200,60 340,140 340,260 200,340 60,260 60,140" fill="none" stroke="#C9A84C" stroke-width="0.5"/>
+        <circle cx="200" cy="200" r="120" fill="none" stroke="#C9A84C" stroke-width="0.5" stroke-dasharray="4,8"/>
+        <circle cx="200" cy="200" r="80" fill="none" stroke="#C9A84C" stroke-width="1"/>
+        <line x1="200" y1="20" x2="200" y2="380" stroke="#C9A84C" stroke-width="0.3"/>
+        <line x1="20" y1="200" x2="380" y2="200" stroke="#C9A84C" stroke-width="0.3"/>
+      </svg>
+    </div>
+
+    <div class="hero-content container">
+      <div class="eyebrow">Trusted Since 2001 — New Delhi, India</div>
+      <h1 class="hero-title">
+        Empowering Your<br>
+        <em>Financial Future</em>
+      </h1>
+      <p class="hero-subtitle">
+        Agile Capital Services delivers institutional-grade wealth management, strategic investment planning, and bespoke financial advisory to individuals and enterprises who demand excellence.
+      </p>
+      <div class="hero-actions">
+        <a href="services.html" class="btn btn-gold btn-arrow">Explore Services</a>
+        <a href="contact.html" class="btn btn-outline">Schedule Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       STATS BAR
+  ═══════════════════════════════════════════ -->
+  <div class="stats-bar">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="25" data-suffix="+" >25+</span>
+        <span class="stat-label">Years of Excellence</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="4200" data-suffix="+">4200+</span>
+        <span class="stat-label">Clients Served</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="12" data-suffix="B+" data-prefix="₹">₹12B+</span>
+        <span class="stat-label">Assets Under Management</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="98" data-suffix="%">98%</span>
+        <span class="stat-label">Client Retention Rate</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES PREVIEW
+  ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:60px;" class="reveal">
+        <div class="section-label">What We Offer</div>
+        <h2 class="section-title">Financial Services Built<br>for <em>Lasting Prosperity</em></h2>
+        <span class="gold-line center"></span>
+      </div>
+
+      <div class="services-grid">
+        <!-- Wealth Management -->
+        <a href="wealth-management.html" class="service-card card reveal reveal-delay-1">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="card-title">Wealth Management</div>
+          <p class="card-text">Comprehensive stewardship of your financial legacy — from asset allocation to estate planning — tailored to your life goals.</p>
+          <span class="card-link">Discover More →</span>
+        </a>
+
+        <!-- Investment Planning -->
+        <a href="investment-planning.html" class="service-card card reveal reveal-delay-2">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div class="card-title">Investment Planning</div>
+          <p class="card-text">Data-driven strategies crafted to maximize returns while prudently managing risk across equity, debt, and alternative investments.</p>
+          <span class="card-link">Discover More →</span>
+        </a>
+
+        <!-- Portfolio Management -->
+        <a href="portfolio-management.html" class="service-card card reveal reveal-delay-3">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+          </div>
+          <div class="card-title">Portfolio Management</div>
+          <p class="card-text">Active and passive portfolio construction with ongoing monitoring, rebalancing, and performance analytics for optimal outcomes.</p>
+          <span class="card-link">Discover More →</span>
+        </a>
+
+        <!-- Financial Advisory -->
+        <a href="financial-advisory.html" class="service-card card reveal reveal-delay-4">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="card-title">Financial Advisory</div>
+          <p class="card-text">Strategic counsel from seasoned advisors on retirement planning, tax efficiency, risk analysis, and business succession.</p>
+          <span class="card-link">Discover More →</span>
+        </a>
+      </div>
+
+      <div style="text-align:center; margin-top:50px;" class="reveal">
+        <a href="services.html" class="btn btn-outline">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHY CHOOSE US
+  ═══════════════════════════════════════════ -->
+  <section class="section" style="background: var(--navy-mid); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:60px;" class="reveal">
+        <div class="section-label">Our Advantage</div>
+        <h2 class="section-title">Why Discerning Clients<br>Choose <em>Agile Capital</em></h2>
+        <span class="gold-line center"></span>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item reveal reveal-delay-1">
+          <div class="why-number">01</div>
+          <div class="why-content">
+            <div class="why-title">Proven Track Record</div>
+            <p class="why-text">Over two decades of consistent, market-beating performance across varied economic cycles — our results speak louder than promises.</p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-2">
+          <div class="why-number">02</div>
+          <div class="why-content">
+            <div class="why-title">Bespoke Strategies</div>
+            <p class="why-text">No off-the-shelf solutions. Every financial plan is meticulously designed around your unique goals, risk appetite, and time horizon.</p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-3">
+          <div class="why-number">03</div>
+          <div class="why-content">
+            <div class="why-title">Transparent Reporting</div>
+            <p class="why-text">Real-time dashboards and quarterly reviews ensure you always have complete visibility into your portfolio's performance.</p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-4">
+          <div class="why-number">04</div>
+          <div class="why-content">
+            <div class="why-title">SEBI Registered</div>
+            <p class="why-text">Fully compliant with regulatory standards, providing you the security of working with a licensed and audited financial institution.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:60px;" class="reveal">
+        <div class="section-label">Client Stories</div>
+        <h2 class="section-title">Voices of Those We've<br><em>Transformed</em></h2>
+        <span class="gold-line center"></span>
+      </div>
+
+      <div class="testimonials-track">
+        <div class="testimonial-card reveal reveal-delay-1">
+          <p class="testimonial-text">Agile Capital Services transformed my financial outlook completely. Their wealth management approach is both sophisticated and deeply personal.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">R</div>
+            <div>
+              <div class="testimonial-name">Rajesh Mehta</div>
+              <div class="testimonial-role">Managing Director, Mehta Industries</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <p class="testimonial-text">For fifteen years, Agile Capital has been my family's trusted financial partner. Their investment planning expertise is truly unmatched in the industry.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">P</div>
+            <div>
+              <div class="testimonial-name">Priya Nair</div>
+              <div class="testimonial-role">CEO, Nair Pharmaceuticals</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-3">
+          <p class="testimonial-text">The portfolio management team at Agile Capital outperformed market benchmarks in three consecutive years. I couldn't be more confident in their abilities.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div>
+              <div class="testimonial-name">Arjun Sharma</div>
+              <div class="testimonial-role">Founder, TechVenture Capital</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA BANNER
+  ═══════════════════════════════════════════ -->
+  <div class="cta-banner reveal">
+    <div class="section-label">Begin Your Journey</div>
+    <h2 class="section-title">Ready to Elevate<br>Your <em>Financial Life?</em></h2>
+    <p class="sub">Schedule a confidential consultation with one of our senior advisors today.</p>
+    <a href="contact.html" class="btn btn-gold btn-arrow">Book a Consultation</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-name" style="display:flex;align-items:center;gap:10px;"><img src="images/logo.jpg" alt="ACS" style="height:36px;width:36px;object-fit:contain;border-radius:3px;"/>Agile Capital Services</div>
+        <div class="logo-tag">Excellence in Finance</div>
+        <p>Delivering institutional-grade financial solutions with a deeply personal touch. Your prosperity is our purpose.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="wealth-management.html">Wealth Management</a>
+        <a href="investment-planning.html">Investment Planning</a>
+        <a href="portfolio-management.html">Portfolio Management</a>
+        <a href="financial-advisory.html">Financial Advisory</a>
+        <a href="services.html">All Services</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html#team">Our Team</a>
+        <a href="about.html#values">Our Values</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>RG Trader Tower, NSP, New Delhi 110034, India</p>
+        <p style="margin-top:8px;">+91 22 4000 5000</p>
+        <p style="margin-top:4px;">hello@agilecapital.in</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Agile Capital Services Pvt. Ltd. All rights reserved. SEBI Registered Investment Adviser.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
