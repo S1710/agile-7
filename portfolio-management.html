@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio Management Services — Agile Capital Services. Active portfolio construction, monitoring, and rebalancing." />
+  <title>Portfolio Management | Agile Capital Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .service-detail-grid { display:grid; grid-template-columns:1.4fr 1fr; gap:80px; align-items:start; }
+    .service-sidebar { position:sticky; top:100px; }
+    .service-nav-card { background:var(--navy-card); border:1px solid var(--border); padding:36px 30px; margin-bottom:24px; }
+    .service-nav-card h4 { font-size:0.65rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; padding-bottom:10px; border-bottom:1px solid var(--border); }
+    .service-nav-link { display:flex; align-items:center; gap:10px; padding:11px 0; font-size:0.82rem; color:var(--white-dim); border-bottom:1px solid rgba(201,168,76,0.08); transition:color var(--transition); }
+    .service-nav-link:last-child { border-bottom:none; }
+    .service-nav-link:hover { color:var(--gold); }
+    .service-nav-link.current { color:var(--gold); font-weight:600; }
+    .service-nav-link::before { content:''; width:16px; height:1px; background:currentColor; flex-shrink:0; }
+
+    .portfolio-stat { background:var(--navy-card); border:1px solid var(--border); border-top:3px solid var(--gold); padding:28px; text-align:center; }
+    .portfolio-stat .p-num { font-family:var(--font-display); font-size:2.5rem; color:var(--gold); }
+    .portfolio-stat .p-label { font-size:0.7rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--white-dim); margin-top:6px; }
+
+    @media (max-width: 900px) { .service-detail-grid { grid-template-columns:1fr; } .service-sidebar { position:static; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo" style="display:flex;align-items:center;gap:10px;">
+      <img src="images/logo.jpg" alt="ACS Logo" style="height:48px;width:48px;object-fit:contain;border-radius:4px;" />
+      <div class="logo-text">
+        <span class="name">Agile Capital Services</span>
+        <span class="tagline">Excellence in Finance</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="nav-dropdown">
+        <span class="nav-link active">Services <span class="dropdown-arrow"></span></span>
+        <div class="dropdown-menu">
+          <a href="wealth-management.html">Wealth Management</a>
+          <a href="investment-planning.html">Investment Planning</a>
+          <a href="portfolio-management.html">Portfolio Management</a>
+          <a href="financial-advisory.html">Financial Advisory</a>
+          <a href="services.html">All Services →</a>
+        </div>
+      </li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <div class="mobile-parent">Services <span class="mobile-arrow">▼</span></div>
+    <div class="mobile-submenu">
+      <a href="wealth-management.html">Wealth Management</a>
+      <a href="investment-planning.html">Investment Planning</a>
+      <a href="portfolio-management.html">Portfolio Management</a>
+      <a href="financial-advisory.html">Financial Advisory</a>
+      <a href="services.html">All Services</a>
+    </div>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" style="min-height:60vh;">
+    <div class="page-hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div style="position:absolute; right:5%; top:50%; transform:translateY(-50%); opacity:0.06; width:min(360px,35vw);">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#C9A84C" stroke-width="1"/>
+        <path d="M100,20 A80,80 0 0,1 180,100" fill="none" stroke="#C9A84C" stroke-width="3"/>
+        <path d="M180,100 A80,80 0 0,1 100,180" fill="none" stroke="#C9A84C" stroke-width="2"/>
+        <path d="M100,180 A80,80 0 0,1 20,100" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+        <path d="M20,100 A80,80 0 0,1 100,20" fill="none" stroke="#C9A84C" stroke-width="1"/>
+        <circle cx="100" cy="100" r="10" fill="#C9A84C" opacity="0.3"/>
+      </svg>
+    </div>
+    <div class="container page-hero-content">
+      <div class="eyebrow">Our Services</div>
+      <h1 class="page-hero-title">Portfolio<br><em>Management</em></h1>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="18" data-suffix="%+ CAGR">18%+</span>
+        <span class="stat-label">Avg. 5-Yr Portfolio Return</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="1200" data-suffix="+">1200+</span>
+        <span class="stat-label">Portfolios Managed</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="6" data-suffix="B+" data-prefix="₹">₹6B+</span>
+        <span class="stat-label">Portfolio AUM</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="99" data-suffix="%">99%</span>
+        <span class="stat-label">Reporting Accuracy</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DETAIL SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="service-detail-grid">
+        <div>
+          <div class="reveal">
+            <div class="section-label">Overview</div>
+            <h2 class="section-title">Professionally Managed<br>Portfolios for <em>Superior Returns</em></h2>
+            <span class="gold-line"></span>
+            <p style="color:var(--white-dim); font-size:0.95rem; line-height:1.9; margin-bottom:1.5rem;">
+              Portfolio management is both an art and a science. At Agile Capital Services, our Portfolio Management division blends quantitative modelling, fundamental analysis, and real-time market intelligence to construct and actively manage portfolios that deliver consistent, risk-adjusted outperformance.
+            </p>
+            <p style="color:var(--white-dim); font-size:0.95rem; line-height:1.9; margin-bottom:2.5rem;">
+              We offer both discretionary and advisory portfolio management services. In the discretionary model, our expert fund managers make all investment decisions on your behalf within predefined parameters, ensuring swift, disciplined execution without the need for your constant involvement.
+            </p>
+          </div>
+
+          <div class="reveal">
+            <div class="section-label" style="margin-bottom:1.5rem;">Key Benefits</div>
+            <div class="benefits-list">
+              <div class="benefit-item reveal reveal-delay-1">
+                <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div>
+                  <div class="benefit-title">Active Portfolio Construction</div>
+                  <p class="benefit-text">Our research team identifies high-conviction opportunities across market caps and sectors, building concentrated portfolios with edge-driven stock selection that outperforms passive benchmarks.</p>
+                </div>
+              </div>
+              <div class="benefit-item reveal reveal-delay-2">
+                <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div>
+                  <div class="benefit-title">Systematic Rebalancing</div>
+                  <p class="benefit-text">Portfolios are continuously monitored and rebalanced when allocations drift from targets — ensuring your risk exposure stays within defined parameters regardless of market movements.</p>
+                </div>
+              </div>
+              <div class="benefit-item reveal reveal-delay-3">
+                <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div>
+                  <div class="benefit-title">Real-Time Performance Monitoring</div>
+                  <p class="benefit-text">Our client portal provides live portfolio analytics including P&L, XIRR, drawdown analysis, and sector exposure — giving you complete transparency at all times.</p>
+                </div>
+              </div>
+              <div class="benefit-item reveal reveal-delay-4">
+                <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div>
+                  <div class="benefit-title">Benchmark-Beating Performance</div>
+                  <p class="benefit-text">Our model portfolios have consistently delivered superior returns compared to Nifty 50 and Sensex benchmarks over rolling 3, 5, and 10-year periods.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:60px;" class="reveal">
+            <div class="section-label" style="margin-bottom:1.5rem;">Portfolio Strategies</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+              <div style="padding:24px; background:var(--navy-card); border:1px solid var(--border); border-left:2px solid var(--gold);">
+                <div style="font-family:var(--font-display); font-size:1.1rem; margin-bottom:8px;">Growth Portfolio</div>
+                <p style="font-size:0.78rem; color:var(--white-dim);">High-conviction equity-focused for long-term capital appreciation.</p>
+              </div>
+              <div style="padding:24px; background:var(--navy-card); border:1px solid var(--border); border-left:2px solid var(--gold);">
+                <div style="font-family:var(--font-display); font-size:1.1rem; margin-bottom:8px;">Balanced Portfolio</div>
+                <p style="font-size:0.78rem; color:var(--white-dim);">60:40 equity-debt blend for steady, moderate-risk wealth building.</p>
+              </div>
+              <div style="padding:24px; background:var(--navy-card); border:1px solid var(--border); border-left:2px solid var(--gold);">
+                <div style="font-family:var(--font-display); font-size:1.1rem; margin-bottom:8px;">Income Portfolio</div>
+                <p style="font-size:0.78rem; color:var(--white-dim);">Dividend stocks and bonds for predictable, regular income generation.</p>
+              </div>
+              <div style="padding:24px; background:var(--navy-card); border:1px solid var(--border); border-left:2px solid var(--gold);">
+                <div style="font-family:var(--font-display); font-size:1.1rem; margin-bottom:8px;">Conservative Portfolio</div>
+                <p style="font-size:0.78rem; color:var(--white-dim);">Capital preservation focus with minimal equity exposure and high liquidity.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:50px;" class="reveal">
+            <a href="contact.html" class="btn btn-gold btn-arrow">Get a Portfolio Review</a>
+          </div>
+        </div>
+
+        <div class="service-sidebar reveal reveal-delay-2">
+          <div class="service-nav-card">
+            <h4>All Services</h4>
+            <a href="wealth-management.html" class="service-nav-link">Wealth Management</a>
+            <a href="investment-planning.html" class="service-nav-link">Investment Planning</a>
+            <a href="portfolio-management.html" class="service-nav-link current">Portfolio Management</a>
+            <a href="financial-advisory.html" class="service-nav-link">Financial Advisory</a>
+          </div>
+          <div class="service-nav-card" style="border-color:var(--gold);">
+            <h4>Quick Consultation</h4>
+            <p style="font-size:0.82rem; color:var(--white-dim); line-height:1.7; margin-bottom:20px;">Speak with a senior portfolio manager — no fees, complete confidentiality.</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center;">Contact Us</a>
+          </div>
+          <div class="service-nav-card">
+            <h4>Contact</h4>
+            <p style="font-size:0.82rem; color:var(--white-dim);">📞 +91 22 4000 5000</p>
+            <p style="font-size:0.82rem; color:var(--white-dim); margin-top:8px;">✉ portfolio@agilecapital.in</p>
+            <p style="font-size:0.82rem; color:var(--white-dim); margin-top:8px;">🕐 Mon–Sat, 9am–7pm IST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner reveal">
+    <div class="section-label">Optimise Your Returns</div>
+    <h2 class="section-title">Let Experts Manage<br>Your <em>Portfolio</em></h2>
+    <p class="sub">Get a comprehensive portfolio review from Agile Capital's investment team.</p>
+    <a href="contact.html" class="btn btn-gold btn-arrow">Contact Us Now</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-name" style="display:flex;align-items:center;gap:10px;"><img src="images/logo.jpg" alt="ACS" style="height:36px;width:36px;object-fit:contain;border-radius:3px;"/>Agile Capital Services</div>
+        <div class="logo-tag">Excellence in Finance</div>
+        <p>Delivering institutional-grade financial solutions with a deeply personal touch.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="wealth-management.html">Wealth Management</a>
+        <a href="investment-planning.html">Investment Planning</a>
+        <a href="portfolio-management.html">Portfolio Management</a>
+        <a href="financial-advisory.html">Financial Advisory</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html#team">Our Team</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>RG Trader Tower, NSP, New Delhi 110034</p>
+        <p style="margin-top:8px;">+91 22 4000 5000</p>
+        <p style="margin-top:4px;">hello@agilecapital.in</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Agile Capital Services Pvt. Ltd. All rights reserved. SEBI Registered Investment Adviser.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
